@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'DIN';
+    src: url('../font/dinbold.woff2') format('woff2'),
+}
+@font-face {
+    font-family: 'bebaNeue';
+    src: url('../font/BebasNeue-Regular.woff') format('woff2');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "DIN", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5 {
+    font-family: "bebaNeue", sans-serif !important;
+}
+/* hero */
+.hero {
+    width: 100%;
+    background: url('../img/bannr.html\ 1.png') no-repeat center;
+    background-size: cover;
+    position: relative;
+    padding: 5rem 0px 12rem;
+}
+.hero:before {
+    background: url(../img/header_bottom.svg) repeat-x top;
+    background-size: auto;
+    bottom: 0;
+    content: "";
+    height: 193px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.container-hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    min-height: 45vh;
+    gap: 20px;
+    width: 100%;
+    max-width: min(100%, 1500px );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.container-hero h2 {
+    font-size: 4.209rem;
+    line-height: 1em;
+    color: #fff;
+    text-transform: uppercase;
+}
+.container-hero p {
+    display: flex;
+    gap: 10px;
+    font-size: 2.369rem;
+    line-height: 1em;
+    color: #333;
+}
+.container-events {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: min(100%, 1500px );
+    margin: 0 auto;
+    position: relative;
+}
+.container-events h3 {
+    color: #333;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: bold;
+     text-decoration: none !important;
+}
+.container-events a {
+    color: #333;
+     text-decoration: none !important;
+}
+.container-events a : hover {
+ text-decoration: underline !important;
+}
+.container-filter {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 #00162b0a;
+}
+.filter {
+    padding: 16px 24px;
+    display: flex;
+}
+.filter .left {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+}
+.filter .left h2 {
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.filter .right {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.filter .left .dropdown {
+    position: relative;
+    margin-right: 5px;
+}
+.filter .left .dropdown-content {
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    border: 1px solid #00162b1f;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 #00162b1f;
+    height: auto;
+    margin-top: 24px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 32px 20px 20px;
+    position: absolute;
+    width: 284px;
+    z-index: 2;
+    display: none;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out;
+}
+.filter .left .dropdown-content.active {
+    display: block;
+    transform: translateY(0px);
+}
+.filter .left .dropdown-content ul {
+   width: 100%;
+}
+.filter .left .dropdown-content ul li {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.filter .left .dropdown-content ul li:last-child {
+    margin-bottom: 0;
+}
+.filter .left .dropdown-content ul li input {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #a0a1a199;
+    border-radius: 4px;
+}
+.dropbtn {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000f1e1a;
+    border-radius: 23px;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 1px 16px 0;
+    width: 100%;
+    gap: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.filter .right .select {
+    border-radius: 20px;
+    height: 40px;
+    background-color: #e2e3e599;
+    overflow: hidden;
+    position: relative;
+    text-overflow: clip;
+    max-width: 264px;
+    min-width: 224px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 4px;
+}
+.filter .right .select .options {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.filter .right .select .options.active {
+    background: #fff;
+}
+.search {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.search input {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    padding-left: 25px;
+}
+.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    width: 100%;
+    align-items: flex-start;
+    color: #737477;
+    display: flex;
+    flex-direction: row;
+    padding: 16px 0;
+    position: relative;
+    z-index: 0;
+    background-color: #fff; /* Card content background */
+    /*border-radius: 30px; !* Rounded corners *!*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+
+    /* Gradient border */
+    border: 5px solid transparent; /* Transparent border to accommodate gradient */
+    border-image: linear-gradient(to top, #ff930c, #e82e73) 1; /* Gradient applied to the border */
+
+    margin-bottom: 20px;
+}
+.card .image {
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 88px;
+    overflow: hidden;
+    position: relative;
+    width: 88px;
+}
+.card .image img {
+    width: 100%;
+}
+.card:hover {
+    /*box-shadow: 0 4px 8px 0 #00162b0a;*/
+      transform: translateY(-10px); /* Move card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.card .content {
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+.card .content span {
+    display: flex;
+    gap: 20px;
+}
+.closeFilter {
+    display: none !important;
+}
+.mb-filter {
+    display: none;
+}
+@media(max-width: 768px) {
+    .container-hero h2 {
+        font-size: 2.8rem;
+        line-height: 1em;
+    }
+    .container-hero p {
+        font-size: 1.7rem;
+    }
+    .filter {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       background: #fff;
+       z-index: 102;
+       height: 100vh;
+       transition: .3s ease-in-out;
+       flex-direction: column;
+       gap: 10px;
+       transform: translateX(-100%);
+    }
+    .filter.active {
+        transform: translateX(0%);
+    }
+    .filter .left {
+        flex: initial;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .filter .right {
+        flex: initial;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+    .filter .left .dropdown {
+        width: 100%;
+    }
+    .filter .right .select {
+        width: 100%;
+        max-width: 100%;
+    }
+    .filter .left .dropdown-content {
+        position: relative;
+        top: -20px;
+        width: 100%;
+    }
+    .closeFilter {
+        display: block !important;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .mb-filter {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+    }
+    .mb-filter span {
+        width: 30px;
+        height: 30px;
+    }
+    .mb-filter h2 {
+        font-size: 14px;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-right: 20px;
+    }
+    .container-events h3 {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+    .container-events {
+        padding-top: 50px;
+    }
+    .container-events .content h3 {
+        font-size: 1.7rem;
+    }
+    .container-events .content p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .card .content span {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,210 @@
+.container-chatbot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*background: rgba(0,0,0,.5);*/
+    z-index: 110;
+    display: flex;
+    transform: translateY(-100%);
+    transition: all .4s ease;
+}
+
+.container-chatbot.active {
+    transform: translateY(0%);
+}
+
+.container-chatbot .chat {
+    min-width: 250px;
+    height: 80vh;
+    border: 4px solid transparent;
+    background: linear-gradient(#fff 0 0) padding-box, linear-gradient(#FEB902 16%, #E83070 100%) border-box;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    max-height: 700px;
+    max-width: 400px;
+    border-radius: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.container-chatbot .chat form {
+    width: 100%;
+    height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 12px 12px;
+    z-index: 2;
+}
+
+.container-chatbot .chat .send {
+    width: 100%;
+}
+
+.container-chatbot .chat .send input {
+    position: relative;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    color: #000;
+    caret-color: #ff882e;
+    border-radius: 8px;
+    border: 1px solid #F26522;
+    margin-top: 0px;
+}
+
+.container-chatbot .chat .send button {
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 0 16px;
+    cursor: pointer;
+    border: 1px solid #F26522;
+    background: transparent;
+}
+
+.container-chatbot .chat .send button:hover {
+    transform: scale(1);
+}
+
+.openChat {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 200;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    font-size: 30px;
+    background: #fff;
+    color: #F26522;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulsing 2s ease 0s infinite normal none running;
+    border: none;
+}
+
+.header-chat {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px 12px;
+    z-index: 2;
+}
+
+.header-chat button {
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    width: 32px;
+    color: #000;
+    z-index: 10000;
+    border: 1px solid #F26522;
+}
+
+@keyframes pulsing {
+    0% {
+        box-shadow: 0 0 0 0 #F26522;
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px #ffb40000;
+    }
+}
+
+.content-chat {
+    padding: 0 12px 12px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.left-chat,
+.right-chat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: left;
+}
+
+.left-chat {
+    padding-left: 8px;
+    position: relative;
+    margin-bottom: 2px;
+    padding-right: 20px;
+}
+
+.left-chat .chat-block {
+    display: flex;
+    line-height: 1.2;
+    padding: 8px 8px 26px;
+    border-radius: 6px;
+    background: #F9F9F9;
+    position: relative;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.right-chat {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.right-chat .chat-block {
+    border-radius: 6px;
+    background: #DCF8C7;
+    color: #000;
+    padding: 6px 80px 4px 12px;
+    position: relative;
+    max-width: 84%;
+    box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width: 768px) {
+    .container-chatbot .chat {
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
