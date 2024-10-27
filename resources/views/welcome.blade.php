@@ -372,7 +372,7 @@
             <a class="more-product" href="PK/products.html" id="more product">view all product</a>
         </div>
     </section>
-    <section>
+    <section style="font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;">
         <div class="container-testimonials">
             <div class="left" data-aos="fade-up" data-aos-duration="2000">
                 <h4 id="Testimonial">Testimonial</h4>
@@ -392,71 +392,47 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="card">
-                                                                  <span style="margin-bottom: 20px; color: " class="profile-info">
+                            <div style="padding-top: 65px;" class="card">
+                                <span style="margin-bottom: 20px; color: " class="profile-info">
                                     <strong>Sparkling Blood Orange</strong>
                                 </span>
                                 <i class="fas fa-quote-right"></i>
                                 <!-- <img src="assets/frontend/img/user.jpg" alt> -->
-                                <p>Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit. Proin
-                                    ornare libero et ipsum vestibulum,
-                                    ac cursus odio bibendum. Sed
-                                    venenatis, metus at volutpat dictum,
-                                    nulla nisl eleifend urna, sit amet
-                                    fringilla risus purus ac purus.
-                                    Integer non odio id arcu vulputate
-                                    laoreet. Duis euismod nisi quis quam
-                                    consectetur vehicula.</p>
-                                    <hr style="width: 40%; margin: 15px 0px; height: 3px; background: #ff9933; border-radius: 5px; outline: none; border: none;" />
-                                <span class="profile-info">
-                                    <strong style="color: green">Company here</strong>
+                                <p>As a fitness trainer, staying hydrated and energized is key. LifeTaste Sparkling Blood Orange gives me that perfect blend of refreshment and zest to keep me going strong!</p>
+                                     <hr style="width: 40%; margin-top: 25px; margin: 15px 0px; height: 3px; background: #ff9933; border-radius: 5px; outline: none; border: none;" />
+                                <span style="d" class="profile-info">
+                                    <span style=" color: green; font-size: 22px; font-style: italic; font-family: fangsong; font-weight: bold;" >John,</span>
+                                    <strong style="color: green">Fitness Trainer</strong>
                                 </span>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card">
+                            <div style="padding-top: 65px;"  class="card">
                                                                   <span style="margin-bottom: 20px;" class="profile-info">
-                                    <strong>User name</strong>
+                                    <strong>Sparkling Mandarin Orange</strong>
                                 </span>
                                 <i class="fas fa-quote-right"></i>
                                 <!-- <img src="frontend/img/user.jpg" alt> -->
-                                <p>Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit. Proin
-                                    ornare libero et ipsum vestibulum,
-                                    ac cursus odio bibendum. Sed
-                                    venenatis, metus at volutpat dictum,
-                                    nulla nisl eleifend urna, sit amet
-                                    fringilla risus purus ac purus.
-                                    Integer non odio id arcu vulputate
-                                    laoreet. Duis euismod nisi quis quam
-                                    consectetur vehicula.</p>
-                                    <hr style="width: 40%; margin: 15px 0px; height: 3px; background: #ff9933; border-radius: 5px; outline: none; border: none;" />
+                                <p>As a teacher, I need something light and refreshing between classes. LifeTaste Sparkling Mandarin Orange is my go-to for a crisp, citrusy pick-me-up!</p>
+                                     <hr style="width: 40%; margin-top: 25px; margin: 15px 0px; height: 3px; background: #ff9933; border-radius: 5px; outline: none; border: none;" />
                                 <span class="profile-info">
-                                    <strong style="color: green">Company here</strong>
+                                    <span style=" color: green; font-size: 22px; font-style: italic; font-family: fangsong; font-weight: bold;" >Emily, </span>
+                                    <strong style="color: green">Teacher</strong>
                                 </span>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card">
-                                                                <span style="margin-bottom: 20px;" class="profile-info">
-                                    <strong>UserName</strong>
+                            <div style="padding-top: 65px;"  class="card">
+                                                                <span style="margin-bottom: 20px; " class="profile-info">
+                                    <strong>Sparkling Mango</strong>
                                 </span>
                                 <i aria-hidden="true" class="icon icon-quote2"></i>
                                 <!-- <img src="frontend/img/user.jpg" alt> -->
-                                <p>Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit.
-                                    Vestibulum consectetur arcu vel
-                                    mauris blandit, vitae efficitur
-                                    sapien scelerisque. Aenean ac turpis
-                                    nulla. Nullam at tincidunt risus.
-                                    Vivamus tincidunt felis nec orci
-                                    dictum, at cursus nulla facilisis.
-                                    Cras ac arcu eget purus eleifend
-                                    finibus.</p>
-                                    <hr style="width: 40%; margin: 15px 0px; height: 3px; background: #ff9933; border-radius: 5px; outline: none; border: none;" />
+                                <p>Nothing beats the tropical flavor of LifeTaste Sparkling Mango after a long day in the kitchen. It’s the perfect blend of sweetness and fizz!</p>
+                                    <hr style="width: 40%; margin-top: 25px; margin: 15px 0px; height: 3px; background: #ff9933; border-radius: 5px; outline: none; border: none;" />
                                 <span class="profile-info">
-                                    <strong style="color: green">Company here</strong>
+                                    <span style=" color: green; font-size: 22px; font-style: italic; font-family: fangsong; font-weight: bold;" >Carlos, </span>
+                                    <strong style="color: green">Chef</strong>
                                 </span>
                             </div>
                         </div>
@@ -497,7 +473,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  style="font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;">
         <div class="container-blog">
             <div class="left" data-aos="fade-up" data-aos-duration="2000">
                 <div class="card">

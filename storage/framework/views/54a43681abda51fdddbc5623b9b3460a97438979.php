@@ -73,6 +73,5 @@
                     </ul>
                 </div>
             </div>
-            <a id="Register / Login" class="login" href="/login">Register
-                / Login</a>
+            <a id="RegisterLoginBtn" class="login" href="#">Register / Login</a>
         </header><?php /**PATH C:\laragon\www\juman\resources\views/layouts/componets/header.blade.php ENDPATH**/ ?>

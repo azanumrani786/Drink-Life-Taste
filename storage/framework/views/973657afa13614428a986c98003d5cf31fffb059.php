@@ -72,35 +72,35 @@
     </head>
     <body>
         <header>
-            <a href="{{url('/')}}"><img src="{{ asset('frontend/img/logo.png' ) }}" alt></a>
+            <a href="<?php echo e(url('/')); ?>"><img src="<?php echo e(asset('frontend/img/logo.png' )); ?>" alt></a>
             <nav>
                 <ul class="menu">
                     <i class="closeNav fas fa-xmark"></i>
-                    <li><a id="our products" href="{{url('/')}}">Home</a></li>
+                    <li><a id="our products" href="<?php echo e(url('/')); ?>">Home</a></li>
                     <li class="products">
                         <a id="our products" href="#">Products <i
                                 class="fas fa-angle-down"></i></a>
                         <div class="products-content">
                             <ul>
-                                <li><a id="product" href="{{route('single_product')}}">All
+                                <li><a id="product" href="<?php echo e(route('single_product')); ?>">All
                                         Products</a></li>
                                 <li><a id="events"
-                                        href="{{route('variant')}}">Variants</a></li>
+                                        href="<?php echo e(route('variant')); ?>">Variants</a></li>
                                 <li><a id="about LifeTaste"
-                                        href="{{route('nutrition')}}">Nutrition</a></li>
+                                        href="<?php echo e(route('nutrition')); ?>">Nutrition</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li><a id="Ambassadors"
-                            href="{{route('testimonial')}}">Testimonials</a></li>
-                    <li><a id="LifeTaste Fitness" href="{{route('our_client')}}">The Green Team</a></li>
-                    <li><a id="events" href="{{route('event')}}">Events</a></li>
+                            href="<?php echo e(route('testimonial')); ?>">Testimonials</a></li>
+                    <li><a id="LifeTaste Fitness" href="<?php echo e(route('our_client')); ?>">The Green Team</a></li>
+                    <li><a id="events" href="<?php echo e(route('event')); ?>">Events</a></li>
                     <li><a id="Ambassadors"
-                            href="{{route('ambassadors')}}">Ambassadors</a></li>
+                            href="<?php echo e(route('ambassadors')); ?>">Ambassadors</a></li>
                     <li><a id="LifeTaste Fitness"
-                            href="{{route('fitness')}}">Fitness</a></li>
-                    <li><a href="{{route('blog-single')}}">Blog</a></li>
+                            href="<?php echo e(route('fitness')); ?>">Fitness</a></li>
+                    <li><a href="<?php echo e(route('blog-single')); ?>">Blog</a></li>
                 </ul>
             </nav>
             <i class="openNav fas fa-bars"></i>
@@ -140,7 +140,7 @@
             <div class="container-product">
                 <div class="left">
                     <div class="title">
-                        <h1>{{ $product->name }}</h1>
+                        <h1><?php echo e($product->name); ?></h1>
                     </div>
                     <div class="reviews">
                         <div class="col">
@@ -159,10 +159,10 @@
                     </div>
                     <div class="flex">
                     <div class="image thumb active">
-                        <img src="{{ asset('$product->image') }}" alt="">
+                        <img src="<?php echo e(asset('$product->image')); ?>" alt="">
                     </div>
                         <div class="image product-img" >
-                            <img src="{{ asset($product->image) }}" alt="">
+                            <img src="<?php echo e(asset($product->image)); ?>" alt="">
                             <!-- <img  src="../../../storage/app/public/products/16/wbC6PfZvFO.png"class="xzoom" id="xzoom-default" xoriginal="./public/img/product.webp" > -->
                         </div>
                                             </div>
@@ -176,7 +176,7 @@
     <section class="section-2">
         <div class="container-ingedients">
             <div class="left">
-                <img src="{{ asset($product->image) }}" alt="">
+                <img src="<?php echo e(asset($product->image)); ?>" alt="">
             </div>
             <div class="right">
                 <h2 id="Ingredients">Ingredients</h2>
@@ -415,3 +415,4 @@
 
 <!-- Mirrored from ideaigniter.com/PK/product/detail/16 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 20:28:25 GMT -->
 </html>
+<?php /**PATH C:\laragon\www\juman\resources\views/product/single_product.blade.php ENDPATH**/ ?>
