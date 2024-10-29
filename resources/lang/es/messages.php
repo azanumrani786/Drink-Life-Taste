@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'welcome' => 'Bienvenido',
+    'goodbye' => 'Adiós',
+    'home' => 'Inicio',
+    'Home' => 'Inicio',
+    'Our Products' => 'Nuestros productos',
+    'All Products' => 'Todos los productos',
+    'Variants' => 'Variantes',
+    'Nutrition' => 'Nutrición',
+    'Testimonials' => 'Testimonios',
+    'The Green Team' => 'El equipo verde',
+    'Events' => 'Eventos',
+    'Ambassadors' => 'Embajadores',
+    'Fitness' => 'Fitness',
+    'Blog' => 'Blog',
+    'Register / Login' => 'Registrarse / Iniciar sesión',
+    'Email Address' => 'Dirección de correo electrónico',
+    'Password' => 'Contraseña',
+    'Login' => 'Iniciar sesión',
+    'Products' => 'Productos',
+    'Agent' => 'Agente',
+    'Distributor' => 'Distribuidor',
+];

@@ -41,7 +41,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::wRHoAGsbvmPiQWDb',
+            '_route' => 'generated::dff4wSisMwh5dpa8',
           ),
           1 => NULL,
           2 => 
@@ -77,7 +77,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::sxwUGV4XsIWriVOt',
+            '_route' => 'generated::0ikESf0QgudN7iHo',
           ),
           1 => NULL,
           2 => 
@@ -350,6 +350,45 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/products/pdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'productspdf',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/set-language' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'set.language',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/login' => 
       array (
         0 => 
@@ -373,7 +412,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::5rcIqmGflnI6mVK1',
+            '_route' => 'generated::luqho8vl2Ajbzhp6',
           ),
           1 => NULL,
           2 => 
@@ -428,7 +467,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::CWe6wuvVZFvpTM6y',
+            '_route' => 'generated::bclvLTvmPicnmM1z',
           ),
           1 => NULL,
           2 => 
@@ -519,7 +558,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::g8RNJ4LLNszUfCAs',
+            '_route' => 'generated::0sSTR8wQCBXVSAYL',
           ),
           1 => NULL,
           2 => 
@@ -578,7 +617,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::lYFw4rbR3Epna3VD',
+            '_route' => 'generated::8X6RO31MBGHNTFwD',
           ),
           1 => NULL,
           2 => 
@@ -806,7 +845,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::K1z9Tu2hRm3HlHyf',
+            '_route' => 'generated::LAkV1YqACNDhCbIU',
           ),
           1 => NULL,
           2 => 
@@ -1189,7 +1228,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::wRHoAGsbvmPiQWDb' => 
+    'generated::dff4wSisMwh5dpa8' => 
     array (
       'methods' => 
       array (
@@ -1209,7 +1248,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::wRHoAGsbvmPiQWDb',
+        'as' => 'generated::dff4wSisMwh5dpa8',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1262,7 +1301,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::sxwUGV4XsIWriVOt' => 
+    'generated::0ikESf0QgudN7iHo' => 
     array (
       'methods' => 
       array (
@@ -1282,7 +1321,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::sxwUGV4XsIWriVOt',
+        'as' => 'generated::0ikESf0QgudN7iHo',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1816,6 +1855,114 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'productspdf' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'products/pdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":1349:{@sXhjUVXRBH0Bx3ha/JIFs2Z0YL2TYnqZSaWNc4b/9+w=.a:5:{s:3:"use";a:0:{}s:8:"function";s:1135:"function () {
+    $products = \\App\\Models\\Product::all(); // Fetch all products from the database
+
+    // Create a new instance of Mpdf
+    $mpdf = new \\Mpdf\\Mpdf();
+
+    // Begin writing the HTML content
+    $html = \'<h1>Product Lists</h1>\';
+    $html .= \'<table border="1" cellpadding="10" cellspacing="0" style="width: 100%;">\';
+    $html .= \'<thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>\';
+
+    foreach ($products as $key => $product) {
+        $keys = $key + 1;
+        $html .= \'<tr>
+                    <td>\' . $keys . \'</td>
+                    <td>\' . $product->name . \'</td>
+                    <td>\' . $product->price . \'</td>
+                    <td>\' . $product->description . \'</td>
+                  </tr>\';
+    }
+
+    $html .= \'</tbody></table>\';
+
+    // Write HTML to the PDF
+    $mpdf->WriteHTML($html);
+
+    // Output the PDF as a download
+    return $mpdf->Output(\'products.pdf\', \'D\');
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000016a1f5f90000000013235403";}}',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'productspdf',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'set.language' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'set-language',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LanguageController@setLanguage',
+        'controller' => 'App\\Http\\Controllers\\LanguageController@setLanguage',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'set.language',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'login' => 
     array (
       'methods' => 
@@ -1853,7 +2000,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::5rcIqmGflnI6mVK1' => 
+    'generated::luqho8vl2Ajbzhp6' => 
     array (
       'methods' => 
       array (
@@ -1873,7 +2020,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::5rcIqmGflnI6mVK1',
+        'as' => 'generated::luqho8vl2Ajbzhp6',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1962,7 +2109,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::CWe6wuvVZFvpTM6y' => 
+    'generated::bclvLTvmPicnmM1z' => 
     array (
       'methods' => 
       array (
@@ -1982,7 +2129,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::CWe6wuvVZFvpTM6y',
+        'as' => 'generated::bclvLTvmPicnmM1z',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2181,7 +2328,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::g8RNJ4LLNszUfCAs' => 
+    'generated::0sSTR8wQCBXVSAYL' => 
     array (
       'methods' => 
       array (
@@ -2201,7 +2348,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::g8RNJ4LLNszUfCAs',
+        'as' => 'generated::0sSTR8wQCBXVSAYL',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2293,7 +2440,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::lYFw4rbR3Epna3VD' => 
+    'generated::8X6RO31MBGHNTFwD' => 
     array (
       'methods' => 
       array (
@@ -2315,7 +2462,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::lYFw4rbR3Epna3VD',
+        'as' => 'generated::8X6RO31MBGHNTFwD',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3199,7 +3346,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::K1z9Tu2hRm3HlHyf' => 
+    'generated::LAkV1YqACNDhCbIU' => 
     array (
       'methods' => 
       array (
@@ -3214,15 +3361,15 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:api',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":291:{@B4UARarsvLplNjKOZXqWqfttAb2vzX/sOWvmhFR6le0=.a:5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009810000000000000000";}";s:4:"hash";s:44:"9hZjnuQb67lLF6Xg9Kjq2ylazBa/uN8WDPpjT2aSu5w=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000016a1f9900000000013235403";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::K1z9Tu2hRm3HlHyf',
+        'as' => 'generated::LAkV1YqACNDhCbIU',
       ),
       'fallback' => false,
       'defaults' => 

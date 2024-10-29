@@ -1,237 +1,310 @@
 <?php echo $__env->make('layouts.componets.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <main>
-    <section>
-        <div class="hero">
-            <div class="container-hero">
-                <div class="col" data-aos="fade-up" data-aos-duration="2000">
-                    <h4 class="category-show">Sparkling Refresher</h4>
-                    <h2 class="hero-title" id="Unleash Your Power Fuel Your Energy">Fizzy
-                        and Fresh, Perfectly Refreshing!</h2>
-                    <p class="hero-text">Now in Pompelmo Grapefruit,
-                        Blood Orange, Mandarin Orange, Mango, Pineapple
-                        Ginger, Pomegranate Cherry, and Tropical
-                        Punch!</p>
-                    <a class="contact-us" id="contact us" href="PK/products.html">Shop now</a>
+    <section> 
+    <div class="hero">
+        <div class="container-hero">
+            <div class="col" data-aos="fade-up" data-aos-duration="2000">
+                <h4 class="category-show"><?php echo e(__('messages.Sparkling Refresher')); ?></h4>
+                <h2 class="hero-title" id="Unleash Your Power Fuel Your Energy"><?php echo e(__('messages.Fizzy and Fresh, Perfectly Refreshing!')); ?></h2>
+                <p class="hero-text"><?php echo e(__('messages.Now in Pompelmo Grapefruit, Blood Orange, Mandarin Orange, Mango, Pineapple Ginger, Pomegranate Cherry, and Tropical Punch!')); ?></p>
+                <a class="contact-us" id="contact us" href="PK/products.html"><?php echo e(__('messages.Shop now')); ?></a>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="2000">
+                <img class="water animate__animated" src="frontend/img/water.png" alt="...">
+                <img class="drink animate__animated" src="frontend/img/sparkling.png" alt="...">
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="2000">
+                <h4 class="citrus" id="Citrus Blast Flavor"><?php echo e(__('messages.Enjoy The Taste Of Life')); ?></h4>
+                <div class="image">
+                    <img src="frontend/img/hero1.jpg" alt="...">
+                    <button class="open-video"><i class="far fa-circle-play"></i></button>
                 </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="2000">
-                    <img class="water animate__animated" src="frontend/img/water.png" alt="...">
-                    <img class="drink animate__animated" src="frontend/img/sparkling.png" alt="...">
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="2000">
-                    <h4 class="citrus" id="Citrus Blast Flavor">Enjoy
-                        The Taste Of Life</h4>
-                    <div class="image">
-                        <img src="frontend/img/hero1.jpg" alt="...">
-                        <button class="open-video"><i class="far fa-circle-play"></i></button>
+                <p class="textBelowVideo"><?php echo e(__('messages.Crafted with care, every bubble counts. Enjoy the taste of life in every sparkling moment.')); ?></p>
+            </div>
+            <div class="video-overlay">
+                <i class="fas fa-xmark closeVideo"></i>
+                <iframe id="video" src="https://www.youtube.com/embed/SxNazVxwXfo?si=GaHsyw9FFKVv7Plf&amp;controls=0"></iframe>
+            </div>
+            <div class="counter-container container-counts">
+                <div class="counter-flex" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="counter-item">
+                        <h2><span class="count" data-count="200">0</span> +</h2>
+                        <p id="Stores Around The World"><?php echo e(__('messages.Stores Around The World')); ?></p>
                     </div>
-                    <p class="textBelowVideo">Crafted with care, every
-                        bubble counts. Enjoy the taste of life in every
-                        sparkling moment.</p>
-                </div>
-                <div class="video-overlay">
-                    <i class="fas fa-xmark closeVideo"></i>
-                    <iframe id="video"
-                        src="https://www.youtube.com/embed/SxNazVxwXfo?si=GaHsyw9FFKVv7Plf&amp;controls=0"></iframe>
-                </div>
-                <div class="counter-container container-counts">
-                    <div class="counter-flex" data-aos="fade-up" data-aos-duration="2000">
-                        <div class="counter-item">
-                            <h2><span class="count" data-count="200">0</span> +</h2>
-                            <p id="Stores Around The World">Stores
-                                Around The World</p>
-                        </div>
-                        <div class="counter-item">
-                            <h2><span class="count" data-count="1000">0</span> +</h2>
-                            <p id="Satisfied Customer">Satisfied
-                                Customer</p>
-                        </div>
-                        <div class="counter-item">
-                            <h2><span class="count" data-count="4">0</span> +</h2>
-                            <p id="Cooperation With Country">Cooperation
-                                With Countries</p>
-                        </div>
+                    <div class="counter-item">
+                        <h2><span class="count" data-count="1000">0</span> +</h2>
+                        <p id="Satisfied Customer"><?php echo e(__('messages.Satisfied Customer')); ?></p>
+                    </div>
+                    <div class="counter-item">
+                        <h2><span class="count" data-count="4">0</span> +</h2>
+                        <p id="Cooperation With Country"><?php echo e(__('messages.Cooperation With Countries')); ?></p>
                     </div>
                 </div>
-                <button class="preview">
-                    <i class="fas fa-angle-left"></i>
-                </button>
-                <button class="next">
-                    <i class="fas fa-angle-right"></i>
-                </button>
+            </div>
+            <button class="preview">
+                <i class="fas fa-angle-left"></i>
+            </button>
+            <button class="next">
+                <i class="fas fa-angle-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="pink">
+    <div class="container-about">
+        <div class="left" data-aos="fade-up" data-aos-duration="2000">
+            <div class="overlay"></div>
+            <h3 id="enjoy the taste of life"><?php echo e(__('messages.enjoy the taste of life')); ?></h3>
+            <div class="flex-image">
+                <img src="frontend/img/drinks.png" alt>
             </div>
         </div>
-    </section>
-    <section class="pink">
-        <div class="container-about">
-            <div class="left" data-aos="fade-up" data-aos-duration="2000">
-                <div class="overlay"></div>
-                <h3 id="enjoy the taste of life">enjoy the taste of
-                    life</h3>
-                <div class="flex-image">
-                    <img src="frontend/img/drinks.png" alt>
-                </div>
+        <div class="right" data-aos="fade-up" data-aos-duration="2000">
+            <div class="col">
+                <h4 id="about us"><a href="<?php echo e(route('about_us')); ?>" style="color: #000;text-decoration: none"><?php echo e(__('messages.About us')); ?></a></h4>
+                <h2 id="Unleash your power, fuel your energy"><?php echo e(__('messages.Energize, Refresh, Recover LifeTaste\'s Perfect Blend!')); ?></h2>
+                <p id="Unleash your power, fuel your energy"><?php echo e(__('messages.A range of delicious drinks that not only quench your thirst but also boost your energy, recharge your body and keep you hydrated.')); ?></p>
             </div>
-            <div class="right" data-aos="fade-up" data-aos-duration="2000">
-                <div class="col">
-                    <h4 id="about us"><a href="<?php echo e(route('about_us')); ?>" style="color: #000;text-decoration: none">About us</a></h4>
-                    <h2 id="Unleash your power, fuel your energ">Energize,
-                        Refresh, Recover LifeTaste's Perfect Blend!</h2>
-                    <p
-                        id="Unleash your power, fuel your energyUn leash your power,fuel your energyUnleash your power,fuel your energy">
-                        A
-                        range of delicious drinks that not only quench
-                        your thirst but also boost your energy, recharge
-                        your body and keep you hydrated.</p>
-                </div>
-                <div class="col">
-                    <img src="frontend/img/physician%20icon.png" alt>
-                </div>
-                <div class="col">
-                    <a href="PK/about.html" id="learn more">Download Product Catalog</a>
-                    <div class="flex-span">
-                        <img src="frontend/img/nnutritional%20facts.png" alt>
-                    </div>
+            <div class="col">
+                <img src="frontend/img/physician%20icon.png" alt>
+            </div>
+            <div class="col">
+                <a href="<?php echo e(route('productspdf')); ?>" id="learn more"><?php echo e(__('messages.Download Product Catalog')); ?></a>
+                <div class="flex-span">
+                    <img src="frontend/img/nnutritional%20facts.png" alt>
                 </div>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="container-select">
-            <div class="buttons">
-                <button class="category-select" id="sparkling">Sparkling
-                    Drink</button>
-                <button class="category-select" id="energy">Energy
-                    Drinks</button>
-                <button class="category-select" id="recovery">Recovery
-                    Drinks</button>
+    </div>
+</section>
+
+<section>
+    <div class="container-select">
+        <div class="buttons">
+            <button class="category-select" id="sparkling"><?php echo e(__('messages.Sparkling Drink')); ?></button>
+            <button class="category-select" id="energy"><?php echo e(__('messages.Energy Drinks')); ?></button>
+            <button class="category-select" id="recovery"><?php echo e(__('messages.Recovery Drinks')); ?></button>
+        </div>
+        <div class="swiper swiperSlide">
+            <div class="swiper-wrapper" style="display: none;">
             </div>
-            <div class="swiper swiperSlide">
-                <div class="swiper-wrapper" style="display: none;">
-
-                </div>
-                <div class="swiper-wrapper">
-                    <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="background: linear-gradient(to top, rgb(255, 255, 235), rgb(255, 247, 125), rgb(255, 255, 235)); width: 287.5px;">
-                        <div class="slide-card">
-                            <img src="<?php echo e(asset($product->image)); ?>" alt="...">
-                            <form class="addTocartForm" data-product-id="27">
-                                <h3 style="color: #008263;"><?php echo e($product->name); ?></h3>
-
-                                <p style="color: #008263;">Pack of <?php echo e($product->quantity); ?></p>
-                                <div class="flex-quantity">
-                                    <div class="quantity" style="color: #008263; border: 1px solid #008263;">
-                                        <span class="addQuantity">+</span>
-                                        <span class="quantitySelect">1</span>
-                                        <span class="decreaseQuantity">-</span>
-                                    </div>
-                                    <button type="submit" style="background-color: #008263;">Add to cart / <span class="price"><?php echo e($product->price); ?></span> </button>
+            <div class="swiper-wrapper">
+                <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="background: linear-gradient(to top, rgb(255, 255, 235), rgb(255, 247, 125), rgb(255, 255, 235)); width: 287.5px;">
+                    <div class="slide-card">
+                        <img src="<?php echo e(asset($product->image)); ?>" alt="...">
+                        <form class="addTocartForm" data-product-id="27">
+                            <h3 style="color: #008263;"><?php echo e($product->name); ?></h3>
+                            <p style="color: #008263;"><?php echo e(__('messages.Pack of')); ?> <?php echo e($product->quantity); ?></p>
+                            <div class="flex-quantity">
+                                <div class="quantity" style="color: #008263; border: 1px solid #008263;">
+                                    <span class="addQuantity">+</span>
+                                    <span class="quantitySelect">1</span>
+                                    <span class="decreaseQuantity">-</span>
                                 </div>
-                                <?php if(isset($product->id)): ?>
-                                    <a href="<?php echo e(url('details', $product->id)); ?>" style="color: #008263;">View Details</a>
-                                <?php else: ?>
-                                    <span style="color: #008263;">Details Not Available</span>
-                                <?php endif; ?>
-                            </form>
+                                <button type="submit" style="background-color: #008263;">
+                                    <?php echo e(__('messages.Add to cart')); ?> / <span class="price"><?php echo e($product->price); ?></span>
+                                </button>
+                            </div>
+                            <?php if(isset($product->id)): ?>
+                                <a href="<?php echo e(url('details', $product->id)); ?>" style="color: #008263;"><?php echo e(__('messages.View Details')); ?></a>
+                            <?php else: ?>
+                                <span style="color: #008263;"><?php echo e(__('messages.Details Not Available')); ?></span>
+                            <?php endif; ?>
+                        </form>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+            <div class="swiper-button-next swiper-button-next-slide"></div>
+            <div class="swiper-button-prev swiper-button-prev-slide"></div>
+        </div>
+        <a class="viewAll" href="PK/products.html" id="view all product"><?php echo e(__('messages.View all Product')); ?></a>
+    </div>
+</section>
+
+<section class="section-3">
+    <div class="container-variant">
+        <div class="center">
+            <div class="left" data-aos="fade-up" data-aos-duration="2000">
+                <h4 id="variant"><?php echo e(__('messages.variant')); ?></h4>
+                <h2 id="More flavor, more power"><?php echo e(__('messages.MORE FLAVOR, MORE POWER!')); ?></h2>
+                <p><?php echo e(__('messages.Explore the vibrant flavors of LifeTaste—each crafted to offer a unique and refreshing experience. From the zesty burst of Blood Orange to the tropical delight of Mango, our drinks are packed with natural goodness and designed to quench your thirst while enhancing your day.')); ?></p>
+            </div>
+            <img src="frontend/img/variant/Energy%20Drink%20Fruit%20Punch.png" alt="<?php echo e(__('messages.Energy Drink Fruit Punch')); ?>">
+            <img src="frontend/img/variant/energy%20drink%20Mango.png" alt="<?php echo e(__('messages.Energy Drink Mango')); ?>">
+            <img src="frontend/img/variant/Energy%20drink%20Orange.png" alt="<?php echo e(__('messages.Energy Drink Orange')); ?>">
+            <img src="frontend/img/variant/Energy%20drink%20Original.png" alt="<?php echo e(__('messages.Energy Drink Original')); ?>">
+            <img src="frontend/img/variant/Energy%20Drink%20Strawberry%20Guava.png" alt="<?php echo e(__('messages.Energy Drink Strawberry Guava')); ?>">
+            <img src="frontend/img/variant/Energy%20Drink%20Tropical%20Punch.png" alt="<?php echo e(__('messages.Energy Drink Tropical Punch')); ?>">
+            <img src="frontend/img/variant/Pompelmo%20Grapefruit.png" alt="<?php echo e(__('messages.Pompelmo Grapefruit')); ?>">
+            <img src="frontend/img/variant/Recovery%20Drink%20Mango.png" alt="<?php echo e(__('messages.Recovery Drink Mango')); ?>">
+            <img src="frontend/img/variant/Recovery%20Drink%20Orange%20Citrus.png" alt="<?php echo e(__('messages.Recovery Drink Orange Citrus')); ?>">
+            <img src="frontend/img/variant/Recovery%20Drink%20Strawberry.png" alt="<?php echo e(__('messages.Recovery Drink Strawberry')); ?>">
+            <img src="frontend/img/variant/Recovery%20Fruit%20Punch.png" alt="<?php echo e(__('messages.Recovery Fruit Punch')); ?>">
+            <img src="frontend/img/variant/spakling%20Mango.png" alt="<?php echo e(__('messages.Sparkling Mango')); ?>">
+            <img src="frontend/img/variant/Sparkling%20Blood%20Orange.png" alt="<?php echo e(__('messages.Sparkling Blood Orange')); ?>">
+            <img src="frontend/img/variant/Sparkling%20Mandarin%20Orange.png" alt="<?php echo e(__('messages.Sparkling Mandarin Orange')); ?>">
+            <img src="frontend/img/variant/Sparkling%20Pineapple%20Ginger.png" alt="<?php echo e(__('messages.Sparkling Pineapple Ginger')); ?>">
+            <img src="frontend/img/variant/Sparkling%20Pomegranate%20Cherry.png" alt="<?php echo e(__('messages.Sparkling Pomegranate Cherry')); ?>">
+            <img src="frontend/img/variant/Sparkling%20Tropical%20Punch.png" alt="<?php echo e(__('messages.Sparkling Tropical Punch')); ?>">
+        </div>
+        <a href="PK/variant.html" id="more variant"><?php echo e(__('messages.MORE Variant')); ?></a>
+    </div>
+</section>
+
+<section class="nutrition">
+    <div class="container-nutrition container-counts">
+        <div class="left" data-aos="fade-up" data-aos-duration="2000">
+            <img class="drink-nutrition animate__animated"
+                src="frontend/img/flavor/Energy%20drink%20Fruit%20punch.png" alt="<?php echo e(__('messages.Energy drink Fruit punch')); ?>">
+        </div>
+        <div class="right" data-aos="fade-up" data-aos-duration="2000">
+            <h4 id="nutrition"><?php echo e(__('messages.Nutrition')); ?></h4>
+            <h2 class="name-drink" id="Citrus blast flavor"><?php echo e(__('messages.Energy drink Fruit punch')); ?></h2>
+            <p class="description"><?php echo e(__('messages.Stay sharp and focused with the classic taste of Fruit Punch, an energy drink that combines natural fruit flavors with a potent energy blend. Ideal for maintaining energy and concentration throughout the day.')); ?></p>
+            <div class="flex">
+                <div class="card">
+                    <div class="overlay"></div>
+                    <span id="calories" class="nutrient"><?php echo e(__('messages.Calories')); ?></span>
+                    <p class="figure"><span class="count calories" data-count="230">0</span> <?php echo e(__('messages.KCAL')); ?></p>
+                </div>
+                <div class="card">
+                    <div class="overlay"></div>
+                    <span id="caffeine" class="nutrient"><?php echo e(__('messages.Caffeine')); ?></span>
+                    <p class="figure"><span class="count caffeine" data-count="250">0</span> <?php echo e(__('messages.mg')); ?></p>
+                </div>
+                <div class="card">
+                    <div class="overlay"></div>
+                    <span id="cabs" class="nutrient"><?php echo e(__('messages.Carbs')); ?></span>
+                    <p class="figure"><span class="count cabs" data-count="40">0</span> <?php echo e(__('messages.g')); ?></p>
+                </div>
+                <div class="card">
+                    <div class="overlay"></div>
+                    <span id="fats" class="nutrient"><?php echo e(__('messages.Fats')); ?></span>
+                    <p class="figure"><span class="count fats" data-count="40">0</span> <?php echo e(__('messages.g')); ?></p>
+                </div>
+            </div>
+            <p class="belowDescription"><?php echo e(__('messages.Fruit Blend: A mix of various fruits, this blend provides essential vitamins and antioxidants, helping to support overall health while delivering a refreshing taste.')); ?></p>
+            <a class="see" href="PK/nutrition.html" id="see more nutrition"><?php echo e(__('messages.View all nutrition')); ?></a>
+        </div>
+        <button class="next-nutrition"><i class="fas fa-angle-right"></i></button>
+        <button class="prev-nutrition"><i class="fas fa-angle-left"></i></button>
+    </div>
+</section>
+
+    <section class="section-4">
+    <div class="container-map">
+        <h4 id="our client"><?php echo e(__('messages.Our Client')); ?></h4>
+        <h2 id="Trust by our clients around the world"><?php echo e(__('messages.Trusted by our clients around the world')); ?></h2>
+        <p><?php echo e(__('messages.Experience the excellence that knows no borders. Our commitment to quality, health, and innovation has earned the trust of consumers worldwide. Join the global community that chooses us for reliability, taste, and success.')); ?></p>
+        <div style="position: relative; overflow:hidden; width: 100%" class="image">
+            <img style="filter: brightness(0) saturate(100%) invert(29%) sepia(75%) saturate(3047%) hue-rotate(320deg) brightness(94%) contrast(93%);" src="frontend/img/map.webp" alt="<?php echo e(__('messages.Map Image')); ?>">
+            <img style="position: absolute; top: 50%; left: 50%; z-index: 500; transform: translate(-50%, -50%); filter: brightness(0) saturate(100%) invert(71%) sepia(50%) saturate(5284%) hue-rotate(352deg) brightness(107%) contrast(99%);" src="frontend/img/mappointers.webp" alt="<?php echo e(__('messages.Map Pointers')); ?>">
+        </div>
+        <a href="PK/clients.html" id="see more"><?php echo e(__('messages.See more')); ?></a>
+    </div>
+</section>
+
+<!-- <section class="product-section">
+    <div class="container-card">
+        <h4 id="product"><?php echo e(__('messages.Product')); ?></h4>
+        <h2 id="Which flavor do you like?"><?php echo e(__('messages.Which flavor do you like?')); ?></h2>
+        <p><?php echo e(__('messages.Discover the burst of flavors that fuel your day. LifeTaste offers a refreshing choice for every palate.')); ?></p>
+        <div class="cards">
+            <div class="card sparkling">
+                <div class="overlay"></div>
+                <div class="title">
+                    <span><?php echo e(__('messages.Sparkling Blood Orange')); ?></span>
+                </div>
+                <div class="content">
+                    <div class="buttons">
+                        <button id="can" data-price="4.15" class="btn active"><?php echo e(__('messages.Pack of 12')); ?></button>
+                    </div>
+                    <div class="box">
+                        <h3 class="price">$ 4.15</h3>
+                        <p><?php echo e(__('messages.Sample description for Sparkling Blood Orange flavor.')); ?></p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="frontend/img/sparkling-nobg.png" alt="<?php echo e(__('messages.Sparkling Blood Orange Image')); ?>">
+                    <form class="addTocartForm formCart" id="1">
+                        <h3><?php echo e(__('messages.Pack of 12')); ?></h3>
+                        <div class="flex-quantity">
+                            <div class="quantity sparkling">
+                                <span style="cursor: pointer;" class="addQuantity add">+</span>
+                                <span class="quantitySelect select">1</span>
+                                <span style="cursor: pointer;" class="decreaseQuantity remove">-</span>
+                            </div>
+                            <button class="sparkling" type="submit"><?php echo e(__('messages.Add to cart')); ?> / <span class="price">4.49</span></button>
+                        </div>
+                        <a href="<?php echo e(route('detail')); ?>"><?php echo e(__('messages.View Details')); ?></a>
+                    </form>
+                </div>
+            </div>
+            <div class="card recovery">
+                <div class="overlay"></div>
+                <div class="title">
+                    <span><?php echo e(__('messages.Recovery Fruit Punch')); ?></span>
+                </div>
+                <div class="content">
+                    <div class="buttons">
+                        <button id="can 1" data-price="3" class="btn active"><?php echo e(__('messages.Pack of 12')); ?></button>
+                    </div>
+                    <div class="box">
+                        <h3 class="price">$ 3</h3>
+                        <p><?php echo e(__('messages.Sample description for Recovery Fruit Punch flavor.')); ?></p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="frontend/img/recovery-nbg.png" alt="<?php echo e(__('messages.Recovery Fruit Punch Image')); ?>">
+                    <form class="addTocartForm formCart" id="2">
+                        <h3><?php echo e(__('messages.Pack of 12')); ?></h3>
+                        <div class="flex-quantity">
+                            <div class="quantity recovery">
+                                <span style="cursor: pointer;" class="addQuantity add">+</span>
+                                <span class="quantitySelect select">1</span>
+                                <span style="cursor: pointer;" class="decreaseQuantity remove">-</span>
+                            </div>
+                            <button class="recovery" type="submit"><?php echo e(__('messages.Add to cart')); ?> / <span class="price">4.49</span></button>
+                        </div>
+                        <a href="<?php echo e(route('detail')); ?>"><?php echo e(__('messages.View Details')); ?></a>
+                    </form>
+                </div>
+            </div>
+            <section>
+                <div class="container-testimonials">
+                    <div class="left" data-aos="fade-up" data-aos-duration="2000">
+                        <h4 id="Testimonial"><?php echo e(__('messages.Testimonial')); ?></h4>
+                        <h2 id="What our client said"><?php echo e(__('messages.What customers have to say!')); ?></h2>
+                        <p><?php echo e(__('messages.LifeTaste consumers are raving about the vibrant flavors and the refreshing boost our beverages bring to their day. From enhanced energy to satisfying hydration, our drinks are making a difference in their daily routines. Join the growing community that’s loving the taste of life!')); ?></p>
+                        <a class="addTestimonial" href="/login"><?php echo e(__('messages.Add Testimonial')); ?></a>
+                        <a class="addTestimonial" href="PK/testimonials.html"><?php echo e(__('messages.All Testimonials')); ?></a>
+                    </div>
+                    <div class="right" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <span class="profile-info"><strong><?php echo e(__('messages.Sparkling Blood Orange')); ?></strong></span>
+                                        <i class="fas fa-quote-right"></i>
+                                        <p><?php echo e(__('messages.As a fitness trainer, staying hydrated and energized is key. LifeTaste Sparkling Blood Orange gives me that perfect blend of refreshment and zest to keep me going strong!')); ?></p>
+                                        <span class="profile-info"><span>John,</span><strong><?php echo e(__('messages.Fitness Trainer')); ?></strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
-                <!-- <div class="swiper-pagination"></div> -->
-                <div class="swiper-button-next swiper-button-next-slide"></div>
-                <div class="swiper-button-prev swiper-button-prev-slide"></div>
-            </div>
-            <a class="viewAll" href="PK/products.html" id="view all product">View all Product</a>
+            </section>
         </div>
-    </section>
-    <section class="section-3">
-        <div class="container-variant">
-            <div class="center">
-                <div class="left" data-aos="fade-up" data-aos-duration="2000">
-                    <h4 id="variant">variant</h4>
-                    <h2 id="More flavor, more power">MORE FLAVOR, MORE
-                        POWER!</h2>
-                    <p>Explore the vibrant flavors of LifeTaste—each
-                        crafted to offer a unique and refreshing
-                        experience. From the zesty burst of Blood Orange
-                        to the tropical delight of Mango, our drinks are
-                        packed with natural goodness and designed to
-                        quench your thirst while enhancing your day.</p>
-                </div>
-                <img src="frontend/img/variant/Energy%20Drink%20Fruit%20Punch.png" alt="Energy Drink Fruit Punch">
-                <img src="frontend/img/variant/energy%20drink%20Mango.png" alt="Energy Drink Mango">
-                <img src="frontend/img/variant/Energy%20drink%20Orange.png" alt="Energy Drink Orange">
-                <img src="frontend/img/variant/Energy%20drink%20Original.png" alt="Energy Drink Original">
-                <img src="frontend/img/variant/Energy%20Drink%20Strawberry%20Guava.png"
-                    alt="Energy Drink Strawberry Guava">
-                <img src="frontend/img/variant/Energy%20Drink%20Tropical%20Punch.png" alt="Energy Drink Tropical Punch">
-                <img src="frontend/img/variant/Pompelmo%20Grapefruit.png" alt="Pompelmo Grapefruit">
-                <img src="frontend/img/variant/Recovery%20Drink%20Mango.png" alt="Recovery Drink Mango">
-                <img src="frontend/img/variant/Recovery%20Drink%20Orange%20Citrus.png"
-                    alt="Recovery Drink Orange Citrus">
-                <img src="frontend/img/variant/Recovery%20Drink%20Strawberry.png" alt="Recovery Drink Strawberry">
-                <img src="frontend/img/variant/Recovery%20Fruit%20Punch.png" alt="Recovery Fruit Punch">
-                <img src="frontend/img/variant/spakling%20Mango.png" alt="Sparkling Mango">
-                <img src="frontend/img/variant/Sparkling%20Blood%20Orange.png" alt="Sparkling Blood Orange">
-                <img src="frontend/img/variant/Sparkling%20Mandarin%20Orange.png" alt="Sparkling Mandarin Orange">
-                <img src="frontend/img/variant/Sparkling%20Pineapple%20Ginger.png" alt="Sparkling Pineapple Ginger">
-                <img src="frontend/img/variant/Sparkling%20Pomegranate%20Cherry.png"
-                    alt="Sparkling Pomegranate Cherry">
-                <img src="frontend/img/variant/Sparkling%20Tropical%20Punch.png" alt="Sparkling Tropical Punch">
+    </div>
+</section> -->
 
-            </div>
-            <a href="PK/variant.html" id="more variant">MORE Variant</a>
-        </div>
-    </section>
-    <section class="nutrition">
-        <div class="container-nutrition container-counts">
-            <div class="left" data-aos="fade-up" data-aos-duration="2000">
-                <img class="drink-nutrition animate__animated"
-                    src="frontend/img/flavor/Energy%20drink%20Fruit%20punch.png" alt>
-            </div>
-            <div class="right" data-aos="fade-up" data-aos-duration="2000">
-                <h4 id="nutrition">Nutrition</h4>
-                <h2 class="name-drink" id="Citrus blast flavor">Energy
-                    drink Fruit punch</h2>
-                <p class="description">Stay sharp and focused with the
-                    classic taste of Fruit Punch, an energy drink that
-                    combines natural fruit flavors with a potent energy
-                    blend. Ideal for maintaining energy and
-                    concentration throughout the day.</p>
-                <div class="flex">
-                    <div class="card">
-                        <div class="overlay"></div>
-                        <span id="calories" class="nutrient">Calories</span>
-                        <p class="figure"><span class="count calories" data-count="230">0</span> KCAL</p>
-                    </div>
-                    <div class="card">
-                        <div class="overlay"></div>
-                        <span id="caffeine" class="nutrient">Caffeine</span>
-                        <p class="figure"><span class="count caffeine" data-count="250">0</span> mg</p>
-                    </div>
-                    <div class="card">
-                        <div class="overlay"></div>
-                        <span id="cabs" class="nutrient">Cabs</span>
-                        <p class="figure"><span class="count cabs" data-count="40">0</span> g</p>
-                    </div>
-                    <div class="card">
-                        <div class="overlay"></div>
-                        <span id="fats" class="nutrient">fats</span>
-                        <p class="figure"><span class="count fats" data-count="40">0</span> g</p>
-                    </div>
-                </div>
-                <p class="belowDescription">Fruit Blend: A mix of
-                    various fruits, this blend provides essential
-                    vitamins and antioxidants, helping to support
-                    overall health while delivering a refreshing
-                    taste.</p>
-                <a class="see" href="PK/nutrition.html" id="see more nutrition">view all nutrition</a>
-            </div>
-            <button class="next-nutrition"><i class="fas fa-angle-right"></i></button>
-            <button class="prev-nutrition"><i class="fas fa-angle-left"></i></button>
-        </div>
-    </section>
-    <section class="section-4">
+<section class="section-4">
         <div class="container-map">
             <h4 id="our client">Our Client</h4>
             <h2 id="Trust by our clients around the world">Trust by our
@@ -443,6 +516,7 @@
             </div>
         </div>
     </section>
+
     <section class="discount-section">
         <div class="discount-container">
             <div class="left" data-aos="fade-up" data-aos-duration="2000">
@@ -617,7 +691,8 @@
             </div>
         </div>
     </section>
-    <section>
+
+    <!-- <section>
         <div class="container-contact">
             <h2 id="Get In Touch With Us">Get In Touch With Us</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -684,7 +759,69 @@
                 </form>
             </div>
         </div>
+    </div> -->
+
+    <section>
+    <div class="container-contact">
+        <h2 id="Get In Touch With Us"><?php echo e(__('messages.Get In Touch With Us')); ?></h2>
+        <p><?php echo e(__('messages.Contact us description text')); ?></p>
+        <div class="flex">
+            <div class="left">
+                <h4><?php echo e(__('messages.Contact us')); ?></h4>
+                <img src="frontend/img/drinks.png" alt="<?php echo e(__('messages.Contact Us Image')); ?>">
+            </div>
+            <div class="right">
+                <h3 id="Leave a Message"><?php echo e(__('messages.Leave a Message')); ?></h3>
+                <p><?php echo e(__('messages.Leave a message description text')); ?></p>
+                <form action="#">
+                    <div class="input-name">
+                        <input name="name" type="text" placeholder="<?php echo e(__('messages.Name')); ?>" required>
+                        <input name="last-name" type="text" placeholder="<?php echo e(__('messages.Last Name')); ?>" required>
+                    </div>
+                    <input name="email" type="email" placeholder="<?php echo e(__('messages.Email')); ?>" required>
+                    <textarea name="message" placeholder="<?php echo e(__('messages.Message')); ?>" cols="30" rows="6" aria-invalid="false"></textarea>
+                    <button type="submit" id="send message"><?php echo e(__('messages.Send Message')); ?></button>
+                </form>
+            </div>
+        </div>
     </div>
+</section>
+
+<section class="section-footer">
+    <div class="container-news">
+        <h3 id="subscribe for our monthly Newsletter"><?php echo e(__('messages.Subscribe for our monthly Newsletter')); ?></h3>
+        <form action="#">
+            <input type="email" placeholder="<?php echo e(__('messages.email')); ?>" required>
+            <button type="submit" id="send"><?php echo e(__('messages.Send')); ?></button>
+        </form>
+    </div>
+</section>
+
+<button class="openChat"><i class="fas fa-comment"></i></button>
+<div class="container-chatbot">
+    <div class="chat">
+        <div class="header-chat">
+            <p><?php echo e(__('messages.LifeTaste ChatBot')); ?></p>
+            <button class="closeChat"><i class="fas fa-xmark"></i></button>
+        </div>
+        <div class="content-chat">
+            <div class="left-chat">
+                <div class="chat-block">
+                    <?php echo e(__('messages.Chatbot greeting message')); ?>
+
+                    <div class="time oneTime">10:20</div>
+                </div>
+            </div>
+        </div>
+        <div class="send">
+            <form class="chat-form">
+                <input class="messageChat" type="text" placeholder="<?php echo e(__('messages.send message')); ?>" name="message-chat">
+                <button type="submit" class="sendMessage"><i class="far fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+
 </main>
 
 <style>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Barryvdh\Snappy\Facades\SnappyPdf as PDF;
 
 class ProductController extends Controller
 {
@@ -73,5 +74,19 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')
                          ->with('success', 'Product deleted successfully.');
+    }
+
+    public function generatePDF()
+    {
+        $products = Product::all();
+        
+        // Set the binary path with quotes
+        $pdf = PDF::loadView('product.pdf', compact('products'))
+                ->setPaper('a4')
+                ->setOption('margin-top', '0mm')
+                ->setOption('margin-bottom', '0mm')
+                ->setOption('binary', 'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'); // Here is the change
+
+        return $pdf->download('product.pdf');
     }
 }

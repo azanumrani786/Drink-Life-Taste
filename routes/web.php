@@ -7,7 +7,10 @@ use App\Http\Controllers\DispatcherController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use Mpdf\Mpdf;
+use App\Models\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,6 +53,47 @@ Route::get('/testimonial', [HomeController::class, 'testimonial'])->name('testim
 // blog routes
 Route::get('/blogs', [HomeController::class, 'blog_single'])->name('blog-single');
 
+// Route::get('/products/pdf', [ProductController::class, 'generatePDF'])->name('productspdf');
+Route::get('/products/pdf', function () {
+    $products = Product::all(); // Fetch all products from the database
+
+    // Create a new instance of Mpdf
+    $mpdf = new Mpdf();
+
+    // Begin writing the HTML content
+    $html = '<h1>Product Lists</h1>';
+    $html .= '<table border="1" cellpadding="10" cellspacing="0" style="width: 100%;">';
+    $html .= '<thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>';
+
+    foreach ($products as $key => $product) {
+        $keys = $key + 1;
+        $html .= '<tr>
+                    <td>' . $keys . '</td>
+                    <td>' . $product->name . '</td>
+                    <td>' . $product->price . '</td>
+                    <td>' . $product->description . '</td>
+                  </tr>';
+    }
+
+    $html .= '</tbody></table>';
+
+    // Write HTML to the PDF
+    $mpdf->WriteHTML($html);
+
+    // Output the PDF as a download
+    return $mpdf->Output('products.pdf', 'D');
+})->name('productspdf');
+
+Route::post('/set-language', [LanguageController::class, 'setLanguage'])->name('set.language');
+
 
 Auth::routes();
 
@@ -74,4 +118,6 @@ Route::get('agent/home', [HomeController::class, 'agentHome'])->name('agent.home
 // Dispatcher route
 Route::get('dispatcher/home', [HomeController::class, 'dispatcherHome'])->name('dispatcher.home')->middleware('is_dispatcher');
 // end admin routes
+
+
 

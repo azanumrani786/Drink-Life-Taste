@@ -36,31 +36,32 @@
         <nav>
             <ul class="menu">
                 <i class="closeNav fas fa-xmark"></i>
-                <li><a id="our products" href="<?php echo e(url('/')); ?>">Home</a></li>
+                <li><a id="our products" href="<?php echo e(url('/')); ?>"><?php echo e(__('messages.Home')); ?></a></li>
                 <li class="products">
-                    <a id="our products" href="#">Products <i
+                    <a id="our products" href="#"><?php echo e(__('messages.Products')); ?> <i
                             class="fas fa-angle-down"></i></a>
                     <div class="products-content">
                         <ul>
-                            <li><a id="product" href="<?php echo e(route('single_product')); ?>">All
-                                    Products</a></li>
+                            <li><a id="product" href="<?php echo e(route('single_product')); ?>">
+                            <?php echo e(__('messages.All Products')); ?> 
+                                </a></li>
                             <li><a id="events"
-                                    href="<?php echo e(route('variant')); ?>">Variants</a></li>
+                                    href="<?php echo e(route('variant')); ?>"><?php echo e(__('messages.Variants')); ?></a></li>
                             <li><a id="about LifeTaste"
-                                    href="<?php echo e(route('nutrition')); ?>">Nutrition</a></li>
+                                    href="<?php echo e(route('nutrition')); ?>"><?php echo e(__('messages.Nutrition')); ?></a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li><a id="Ambassadors"
-                        href="<?php echo e(route('testimonial')); ?>">Testimonials</a></li>
-                <li><a id="LifeTaste Fitness" href="<?php echo e(route('our_client')); ?>">The Green Team</a></li>
-                <li><a id="events" href="<?php echo e(route('event')); ?>">Events</a></li>
+                        href="<?php echo e(route('testimonial')); ?>"><?php echo e(__('messages.Testimonials')); ?></a></li>
+                <li><a id="LifeTaste Fitness" href="<?php echo e(route('our_client')); ?>"><?php echo e(__('messages.The Green Team')); ?></a></li>
+                <li><a id="events" href="<?php echo e(route('event')); ?>"><?php echo e(__('messages.Events')); ?></a></li>
                 <li><a id="Ambassadors"
-                        href="<?php echo e(route('ambassadors')); ?>">Ambassadors</a></li>
+                        href="<?php echo e(route('ambassadors')); ?>"><?php echo e(__('messages.Ambassadors')); ?></a></li>
                 <li><a id="LifeTaste Fitness"
-                        href="<?php echo e(route('fitness')); ?>">Fitness</a></li>
-                <li><a href="<?php echo e(route('blog-single')); ?>">Blog</a></li>
+                        href="<?php echo e(route('fitness')); ?>"><?php echo e(__('messages.Fitness')); ?></a></li>
+                <li><a href="<?php echo e(route('blog-single')); ?>"><?php echo e(__('messages.Blog')); ?></a></li>
             </ul>
         </nav>
         <i class="openNav fas fa-bars"></i>
@@ -74,8 +75,48 @@
                 </ul>
             </div>
         </div>
-        <a id="Register / Login" class="login xk7-btn" href="#">Register
-            / Login</a>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageButton = document.querySelector('.languagebtn');
+                const languageMenu = document.getElementById('language');
+
+                // Toggle language menu visibility
+                languageButton.addEventListener('click', function() {
+                    languageMenu.style.display = languageMenu.style.display === 'none' ? 'block' : 'none';
+                });
+
+                // Change language and submit form
+                languageMenu.addEventListener('click', function(event) {
+                    const selectedLang = event.target.getAttribute('data-lang');
+                    if (selectedLang) {
+                        // Create a form and submit it
+                        const form = document.createElement('form');
+                        form.action = "<?php echo e(route('set.language')); ?>"; // Update with your route
+                        form.method = 'POST';
+                        form.style.display = 'none';
+
+                        const csrfInput = document.createElement('input');
+                        csrfInput.type = 'hidden';
+                        csrfInput.name = '_token';
+                        csrfInput.value = '<?php echo e(csrf_token()); ?>'; // Add CSRF token
+
+                        const langInput = document.createElement('input');
+                        langInput.type = 'hidden';
+                        langInput.name = 'language';
+                        langInput.value = selectedLang;
+
+                        form.appendChild(csrfInput);
+                        form.appendChild(langInput);
+                        document.body.appendChild(form);
+                        form.submit();
+                    }
+                });
+            });
+        </script>
+            <a id="Register / Login" class="login xk7-btn" href="#">
+                <?php echo e(__('messages.Register / Login')); ?>
+
+            </a>
         <style>
             .xk7-btn {
                 /* padding: 10px 20px;
@@ -205,23 +246,25 @@
                 <span class="j2l-close">&times;</span>
 
                 <div class="h6n-tab">
-                    <button class="m4s-tablink b9c-active" onclick="openTab(event, 'Login')">Login</button>
-                    <button class="m4s-tablink" onclick="openTab(event, 'Agent')">Agent</button>
-                    <button class="m4s-tablink" onclick="openTab(event, 'Distributor')">Distributor</button>
+                    <button class="m4s-tablink b9c-active" onclick="openTab(event, 'Login')"><?php echo e(__('messages.Login')); ?>
+
+                    </button>
+                    <button class="m4s-tablink" onclick="openTab(event, 'Agent')"><?php echo e(__('messages.Agent')); ?></button>
+                    <button class="m4s-tablink" onclick="openTab(event, 'Distributor')"><?php echo e(__('messages.Distributor')); ?></button>
                 </div>
 
                 <div id="Login" class="w5y-tabcontent" style="display:block;">
                     <form method="POST" action="<?php echo e(route('login')); ?>">
                         <div class="f1d-group">
-                            <label for="email">Email Address</label>
+                            <label for="email"><?php echo e(__('messages.Email Address')); ?></label>
                             <input id="email" type="email" name="email" required autocomplete="email" autofocus>
                         </div>
                         <div class="f1d-group">
-                            <label for="password">Password</label>
+                            <label for="password"><?php echo e(__('messages.Password')); ?></label>
                             <input id="password" type="password" name="password" required autocomplete="current-password">
                         </div>
                         <div class="t8g-buttons">
-                            <button type="submit" class="u2z-btn">Login</button>
+                            <button type="submit" class="u2z-btn"><?php echo e(__('messages.Login')); ?></button>
                         </div>
                     </form>
                 </div>

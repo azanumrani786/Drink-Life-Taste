@@ -36,31 +36,32 @@
         <nav>
             <ul class="menu">
                 <i class="closeNav fas fa-xmark"></i>
-                <li><a id="our products" href="{{url('/')}}">Home</a></li>
+                <li><a id="our products" href="{{url('/')}}">{{ __('messages.Home') }}</a></li>
                 <li class="products">
-                    <a id="our products" href="#">Products <i
+                    <a id="our products" href="#">{{ __('messages.Products') }} <i
                             class="fas fa-angle-down"></i></a>
                     <div class="products-content">
                         <ul>
-                            <li><a id="product" href="{{route('single_product')}}">All
-                                    Products</a></li>
+                            <li><a id="product" href="{{route('single_product')}}">
+                            {{ __('messages.All Products') }} 
+                                </a></li>
                             <li><a id="events"
-                                    href="{{route('variant')}}">Variants</a></li>
+                                    href="{{route('variant')}}">{{ __('messages.Variants') }}</a></li>
                             <li><a id="about LifeTaste"
-                                    href="{{route('nutrition')}}">Nutrition</a></li>
+                                    href="{{route('nutrition')}}">{{ __('messages.Nutrition') }}</a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li><a id="Ambassadors"
-                        href="{{route('testimonial')}}">Testimonials</a></li>
-                <li><a id="LifeTaste Fitness" href="{{route('our_client')}}">The Green Team</a></li>
-                <li><a id="events" href="{{route('event')}}">Events</a></li>
+                        href="{{route('testimonial')}}">{{ __('messages.Testimonials') }}</a></li>
+                <li><a id="LifeTaste Fitness" href="{{route('our_client')}}">{{ __('messages.The Green Team') }}</a></li>
+                <li><a id="events" href="{{route('event')}}">{{ __('messages.Events') }}</a></li>
                 <li><a id="Ambassadors"
-                        href="{{route('ambassadors')}}">Ambassadors</a></li>
+                        href="{{route('ambassadors')}}">{{ __('messages.Ambassadors') }}</a></li>
                 <li><a id="LifeTaste Fitness"
-                        href="{{route('fitness')}}">Fitness</a></li>
-                <li><a href="{{route('blog-single')}}">Blog</a></li>
+                        href="{{route('fitness')}}">{{ __('messages.Fitness') }}</a></li>
+                <li><a href="{{route('blog-single')}}">{{ __('messages.Blog') }}</a></li>
             </ul>
         </nav>
         <i class="openNav fas fa-bars"></i>
@@ -74,8 +75,47 @@
                 </ul>
             </div>
         </div>
-        <a id="Register / Login" class="login xk7-btn" href="#">Register
-            / Login</a>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const languageButton = document.querySelector('.languagebtn');
+                const languageMenu = document.getElementById('language');
+
+                // Toggle language menu visibility
+                languageButton.addEventListener('click', function() {
+                    languageMenu.style.display = languageMenu.style.display === 'none' ? 'block' : 'none';
+                });
+
+                // Change language and submit form
+                languageMenu.addEventListener('click', function(event) {
+                    const selectedLang = event.target.getAttribute('data-lang');
+                    if (selectedLang) {
+                        // Create a form and submit it
+                        const form = document.createElement('form');
+                        form.action = "{{ route('set.language') }}"; // Update with your route
+                        form.method = 'POST';
+                        form.style.display = 'none';
+
+                        const csrfInput = document.createElement('input');
+                        csrfInput.type = 'hidden';
+                        csrfInput.name = '_token';
+                        csrfInput.value = '{{ csrf_token() }}'; // Add CSRF token
+
+                        const langInput = document.createElement('input');
+                        langInput.type = 'hidden';
+                        langInput.name = 'language';
+                        langInput.value = selectedLang;
+
+                        form.appendChild(csrfInput);
+                        form.appendChild(langInput);
+                        document.body.appendChild(form);
+                        form.submit();
+                    }
+                });
+            });
+        </script>
+            <a id="Register / Login" class="login xk7-btn" href="#">
+                {{ __('messages.Register / Login') }}
+            </a>
         <style>
             .xk7-btn {
                 /* padding: 10px 20px;
@@ -205,23 +245,24 @@
                 <span class="j2l-close">&times;</span>
 
                 <div class="h6n-tab">
-                    <button class="m4s-tablink b9c-active" onclick="openTab(event, 'Login')">Login</button>
-                    <button class="m4s-tablink" onclick="openTab(event, 'Agent')">Agent</button>
-                    <button class="m4s-tablink" onclick="openTab(event, 'Distributor')">Distributor</button>
+                    <button class="m4s-tablink b9c-active" onclick="openTab(event, 'Login')">{{ __('messages.Login') }}
+                    </button>
+                    <button class="m4s-tablink" onclick="openTab(event, 'Agent')">{{ __('messages.Agent') }}</button>
+                    <button class="m4s-tablink" onclick="openTab(event, 'Distributor')">{{ __('messages.Distributor') }}</button>
                 </div>
 
                 <div id="Login" class="w5y-tabcontent" style="display:block;">
                     <form method="POST" action="{{ route('login') }}">
                         <div class="f1d-group">
-                            <label for="email">Email Address</label>
+                            <label for="email">{{ __('messages.Email Address') }}</label>
                             <input id="email" type="email" name="email" required autocomplete="email" autofocus>
                         </div>
                         <div class="f1d-group">
-                            <label for="password">Password</label>
+                            <label for="password">{{ __('messages.Password') }}</label>
                             <input id="password" type="password" name="password" required autocomplete="current-password">
                         </div>
                         <div class="t8g-buttons">
-                            <button type="submit" class="u2z-btn">Login</button>
+                            <button type="submit" class="u2z-btn">{{ __('messages.Login') }}</button>
                         </div>
                     </form>
                 </div>
