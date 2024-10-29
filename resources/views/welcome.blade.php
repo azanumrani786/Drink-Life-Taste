@@ -1,5 +1,5 @@
 @include('layouts.componets.header')
-
+<!-- test -->
 <main>
     <section> 
     <div class="hero">
