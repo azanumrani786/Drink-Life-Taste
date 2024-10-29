@@ -1,7 +1,7 @@
 @include('layouts.componets.header')
 
 <main>
-    <section>
+    <section> 
         <div class="hero">
             <div class="container-hero">
                 <div class="col" data-aos="fade-up" data-aos-duration="2000">
