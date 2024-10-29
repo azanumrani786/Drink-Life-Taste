@@ -32,35 +32,35 @@
 
 <body>
     <header>
-        <a href="{{url('/')}}"><img src="frontend/img/logo.png" alt></a>
+        <a href="<?php echo e(url('/')); ?>"><img src="frontend/img/logo.png" alt></a>
         <nav>
             <ul class="menu">
                 <i class="closeNav fas fa-xmark"></i>
-                <li><a id="our products" href="{{url('/')}}">Home</a></li>
+                <li><a id="our products" href="<?php echo e(url('/')); ?>">Home</a></li>
                 <li class="products">
                     <a id="our products" href="#">Products <i
                             class="fas fa-angle-down"></i></a>
                     <div class="products-content">
                         <ul>
-                            <li><a id="product" href="{{route('single_product')}}">All
+                            <li><a id="product" href="<?php echo e(route('single_product')); ?>">All
                                     Products</a></li>
                             <li><a id="events"
-                                    href="{{route('variant')}}">Variants</a></li>
+                                    href="<?php echo e(route('variant')); ?>">Variants</a></li>
                             <li><a id="about LifeTaste"
-                                    href="{{route('nutrition')}}">Nutrition</a></li>
+                                    href="<?php echo e(route('nutrition')); ?>">Nutrition</a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li><a id="Ambassadors"
-                        href="{{route('testimonial')}}">Testimonials</a></li>
-                <li><a id="LifeTaste Fitness" href="{{route('our_client')}}">The Green Team</a></li>
-                <li><a id="events" href="{{route('event')}}">Events</a></li>
+                        href="<?php echo e(route('testimonial')); ?>">Testimonials</a></li>
+                <li><a id="LifeTaste Fitness" href="<?php echo e(route('our_client')); ?>">The Green Team</a></li>
+                <li><a id="events" href="<?php echo e(route('event')); ?>">Events</a></li>
                 <li><a id="Ambassadors"
-                        href="{{route('ambassadors')}}">Ambassadors</a></li>
+                        href="<?php echo e(route('ambassadors')); ?>">Ambassadors</a></li>
                 <li><a id="LifeTaste Fitness"
-                        href="{{route('fitness')}}">Fitness</a></li>
-                <li><a href="{{route('blog-single')}}">Blog</a></li>
+                        href="<?php echo e(route('fitness')); ?>">Fitness</a></li>
+                <li><a href="<?php echo e(route('blog-single')); ?>">Blog</a></li>
             </ul>
         </nav>
         <i class="openNav fas fa-bars"></i>
@@ -211,7 +211,7 @@
                 </div>
 
                 <div id="Login" class="w5y-tabcontent" style="display:block;">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="<?php echo e(route('login')); ?>">
                         <div class="f1d-group">
                             <label for="email">Email Address</label>
                             <input id="email" type="email" name="email" required autocomplete="email" autofocus>
@@ -227,7 +227,7 @@
                 </div>
 
                 <div id="Agent" class="w5y-tabcontent">
-                    <form method="POST" action="{{ route('agent.login') }}">
+                    <form method="POST" action="<?php echo e(route('agent.login')); ?>">
                         <div class="f1d-group">
                             <label for="agent-email">Email Address</label>
                             <input id="agent-email" type="email" name="email" required autocomplete="email" autofocus>
@@ -243,7 +243,7 @@
                 </div>
 
                 <div id="Distributor" class="w5y-tabcontent">
-                    <form method="POST" action="{{ route('dispatcher.login') }}">
+                    <form method="POST" action="<?php echo e(route('dispatcher.login')); ?>">
                         <div class="f1d-group">
                             <label for="distributor-email">Email Address</label>
                             <input id="distributor-email" type="email" name="email" required autocomplete="email" autofocus>
@@ -291,4 +291,4 @@
             // Initialize
             tabs[0].click();
         </script>
-    </header>
+    </header><?php /**PATH E:\laragon\www\latestjumancode\Drink-Life-Taste\resources\views/layouts/componets/header.blade.php ENDPATH**/ ?>

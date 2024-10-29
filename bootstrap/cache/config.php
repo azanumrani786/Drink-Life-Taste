@@ -177,7 +177,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\laragon\\www\\juman\\storage\\framework/cache/data',
+        'path' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -266,7 +266,7 @@
         'port' => '3306',
         'database' => 'juman',
         'username' => 'root',
-        'password' => 'Password@123',
+        'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -286,7 +286,7 @@
         'port' => '3306',
         'database' => 'juman',
         'username' => 'root',
-        'password' => 'Password@123',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -301,7 +301,7 @@
         'port' => '3306',
         'database' => 'juman',
         'username' => 'root',
-        'password' => 'Password@123',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -343,12 +343,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\juman\\storage\\app',
+        'root' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\juman\\storage\\app/public',
+        'root' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -365,7 +365,7 @@
     ),
     'links' => 
     array (
-      'C:\\laragon\\www\\juman\\public\\storage' => 'C:\\laragon\\www\\juman\\storage\\app/public',
+      'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\public\\storage' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -399,13 +399,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\laragon\\www\\juman\\storage\\logs/laravel.log',
+        'path' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\laragon\\www\\juman\\storage\\logs/laravel.log',
+        'path' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -455,7 +455,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\laragon\\www\\juman\\storage\\logs/laravel.log',
+        'path' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -512,7 +512,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\laragon\\www\\juman\\resources\\views/vendor/mail',
+        0 => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -591,7 +591,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\laragon\\www\\juman\\storage\\framework/sessions',
+    'files' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -611,9 +611,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\laragon\\www\\juman\\resources\\views',
+      0 => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\resources\\views',
     ),
-    'compiled' => 'C:\\laragon\\www\\juman\\storage\\framework\\views',
+    'compiled' => 'E:\\laragon\\www\\latestjumancode\\Drink-Life-Taste\\storage\\framework\\views',
   ),
   'flare' => 
   array (
